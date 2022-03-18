@@ -883,8 +883,7 @@ void WriteXML_MP(std::string sGVL, std::string VAV[200], bool bUsed[200],
     }
 
     //Nytt
-    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    pos = VAV[0].find("SQ") + 2;
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     bool xFirst = true;
 
     fOutput << "<pou name=\"PRG_360_VAV_Max\" pouType=\"program\">\n" + Tabs(3);
@@ -906,6 +905,7 @@ void WriteXML_MP(std::string sGVL, std::string VAV[200], bool bUsed[200],
     {
         if (bUsed[i])
         {
+            pos = VAV[i].find("SQ") + 2;
             if (VAV[i].substr(pos, 1) == "4" && (sMin[i] != sNorm[i] || sNorm[i] != sMax[i]))
             {
                 if (xFirst)
@@ -934,6 +934,7 @@ void WriteXML_MP(std::string sGVL, std::string VAV[200], bool bUsed[200],
     {
         if (bUsed[i])
         {
+            pos = VAV[i].find("SQ") + 2;
             if (VAV[i].substr(pos, 1) == "5" && (sMin[i] != sNorm[i] || sNorm[i] != sMax[i]))
             {
                 if (xFirst)
@@ -975,7 +976,7 @@ void WriteXML_MP(std::string sGVL, std::string VAV[200], bool bUsed[200],
 
 
     //Nytt
-    ///////////////////////
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     fOutput << "<variable name=\"" << sAdresseFormat << "_001_OU001_SQ401_Max\">\n" + Tabs(6);
     fOutput << "<type>\n" + Tabs(7);
