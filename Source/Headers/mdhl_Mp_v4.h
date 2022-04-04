@@ -906,7 +906,7 @@ void WriteXML_MP(std::string sGVL, std::string VAV[200], bool bUsed[200],
         if (bUsed[i])
         {
             pos = VAV[i].find("SQ") + 2;
-            if (VAV[i].substr(pos, 1) == "4" && (sMin[i] != sNorm[i] || sNorm[i] != sMax[i]))
+            if (VAV[i].substr(pos, 1) == "4")
             {
                 if (xFirst)
                 {
@@ -935,7 +935,7 @@ void WriteXML_MP(std::string sGVL, std::string VAV[200], bool bUsed[200],
         if (bUsed[i])
         {
             pos = VAV[i].find("SQ") + 2;
-            if (VAV[i].substr(pos, 1) == "5" && (sMin[i] != sNorm[i] || sNorm[i] != sMax[i]))
+            if (VAV[i].substr(pos, 1) == "5")
             {
                 if (xFirst)
                 {
